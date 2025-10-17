@@ -22,10 +22,11 @@ public class WebSocketConfig {
         map.put("/ws", handler);
 
         SimpleUrlHandlerMapping mapping = new SimpleUrlHandlerMapping();
-        mapping.setOrder(10);
+        mapping.setOrder(-1);
         mapping.setUrlMap(map);
         return mapping;
     }
+
 
     @Bean
     public WebSocketHandlerAdapter handlerAdapter() {
